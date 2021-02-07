@@ -3,6 +3,8 @@
 # 클로저 심화
 # 클로저 : 외부에서 호출 된 함수의 변수값, 상태(레퍼런스) 복사 후 저장 -> 후에 접근(엑세스) 가능
 # 클로저(Closure) 사용
+
+#ex1에서 사용 된 series(리스트)는 가변 자료구조이고, ex2에서 사용 된 Local Variable은 Immutable 성격을 가지고 있어, 에러가 발생한다.
 def closure_ex1():
     # Free variable
     series = []
