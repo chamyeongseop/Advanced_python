@@ -48,6 +48,7 @@ print()
 
 # Closure(클로저) 사용 이유
 # 서버 프로그래밍 -> 동시성(Concurrency)제어 -> 메모리 공간에 여러 자원이 접근 -> 교착상태(Dead Lock)
+# Tomcat, Firefly 같은 오픈소스도 활용하면 좋음
 # 메모리를 공유하지 않고 메시지 전달로 처리하기 위한 -> Erlang
 # 클로저는 공유하되 변경되지 않는(Immutable, Read Only) 적극적으로 사용 -> 함수형 프로그래밍
 # 클로저는 불변자료구조 및 atom, STM -> 멀티스레드(Coroutine) 프로그래밍에 강점
