@@ -75,10 +75,10 @@ class Averager():
         return sum(self._series) / len(self._series)
 
 
-# 인스턴스 생성
+# 클래스 인스턴스 생성
 averager_cls = Averager()
 
-# 누적
+# 누적, 클래스를 함수처럼 실행 가능함.(중요)
 print(averager_cls(15))
 print(averager_cls(35))
 print(averager_cls(40))
