@@ -4,7 +4,7 @@
 # 클래스 상세 설명
 # 클래스 변수, 인스턴스 변수
 
-# 클래스 재 선언
+# 클래스 재선언
 class Car():
     """
     Car Class
@@ -50,12 +50,14 @@ print(car1._company == car2._company)
 print(car1 is car2)
 
 # dir & __dict__ 확인
+# dir : 포괄적인, 리스트 형식으로 상위로부터 Overriding (상속받는) 모든 것들을 표시 
 print(dir(car1))
 print(dir(car2))
 
 print()
 print()
 
+# dic : "키, 값"으로 모든 것들을 보여줌 (내부 값을 보여줌)
 print(car1.__dict__)
 print(car2.__dict__)
 
