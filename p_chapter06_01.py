@@ -2,7 +2,8 @@
 # 병행성(Concurrency)
 # 이터레이터, 제네레이터
 # Iterator, Generator
-
+## Generator: 함수로서, Iterator를 Return 해준다.
+## Iterator: 반복 가능한 객체 (Iterable)
 
 # 파이썬 반복 가능한 타입
 # for, collections, text file, List, Dict, Set, Tuple, unpacking, *args
