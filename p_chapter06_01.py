@@ -3,6 +3,7 @@
 # 이터레이터, 제네레이터
 # Iterator, Generator
 
+
 # 파이썬 반복 가능한 타입
 # for, collections, text file, List, Dict, Set, Tuple, unpacking, *args
 
