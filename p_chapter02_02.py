@@ -16,15 +16,18 @@ class Car():
     car_count = 0
 
     def __init__(self, company, details):
+        # Self가 붙어있는 변수는 보통 인스턴스 변수라고 말함.
         self._company = company
         self._details = details
         Car.car_count += 1
-
+    
+    # 아래는 인스턴스 메소드
     def __str__(self):
         return 'str : {} - {}'.format(self._company, self._details)
 
     def __repr__(self):
         return 'repr : {} - {}'.format(self._company, self._details)
+
 
     def detail_info(self):
         print('Current Id : {}'.format(id(self)))
