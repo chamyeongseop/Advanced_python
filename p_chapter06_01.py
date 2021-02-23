@@ -6,9 +6,10 @@
 ## Iterator: 반복 가능한 객체 (Iterable)
 
 # 파이썬 반복 가능한 타입
-# for, collections, text file, List, Dict, Set, Tuple, unpacking, *args
+# for, collections, text file, List, Dict, Set, Tuple, unpacking, *args : Iterable
 
-# 반복 가능한 이유? -> iter(x) 함수 호출
+# 반복 가능한 이유? -> 내부적으로 iter(x) 함수 호출
+# t의 타입은 Text
 t = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 # for 반복
