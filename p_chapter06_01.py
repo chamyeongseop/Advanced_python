@@ -29,7 +29,7 @@ while True:
         break
 
 print()
-
+# abc = abstract class
 from collections import abc
 
 # 반복형 확인
