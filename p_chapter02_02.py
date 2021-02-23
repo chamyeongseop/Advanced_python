@@ -34,7 +34,7 @@ class Car():
         Car.car_count -= 1
 
 
-# Self 의미
+# Self 의미 : 클래스를 기반으로 생성 된 인스턴스 내부의 고유의 값을 저장하기 위한 예약어
 car1 = Car('Ferrari', {'color' : 'White', 'horsepower': 400, 'price': 8000})
 car2 = Car('Bmw', {'color' : 'Black', 'horsepower': 270, 'price': 5000})
 car3 = Car('Audi', {'color' : 'Silver', 'horsepower': 300, 'price': 6000})
@@ -44,7 +44,9 @@ print(id(car1))
 print(id(car2))
 print(id(car3))
 
+# 값을 비교
 print(car1._company == car2._company)
+# Instance 자체를 비교 (ID 값을 비교)
 print(car1 is car2)
 
 # dir & __dict__ 확인
