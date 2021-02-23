@@ -69,15 +69,16 @@ print()
 # 클래스 구조
 # 구조 설계 후 재사용성 증가, 코드 반복 최소화, 메소드 활용
 class Car():
+
     def __init__(self, company, details):
-        self._company = company
-        self._details = details
-
+        self.company = company
+        self.details = details
+    # 사용자 레벨
     def __str__(self):
-        return 'str : {} - {}'.format(self._company, self._details)
-
+        return 'str : {} - {}'.format(self.company, self.details)
+    # 개발자 레벨 : 객체 정보까지 문자열로 표현해준다.
     def __repr__(self):
-        return 'repr : {} - {}'.format(self._company, self._details)
+        return 'repr : {} - {}'.format(self.company, self.details)
     
 
 car1 = Car('Ferrari', {'color' : 'White', 'horsepower': 400, 'price': 8000})
