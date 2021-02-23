@@ -12,7 +12,7 @@ class Car():
     Date : 2019.11.08
     """
 
-    # 클래스 변수
+    # 클래스 변수 : 모든 인스턴스가 공유함. 공통적으로 참조함
     car_count = 0
 
     def __init__(self, company, details):
