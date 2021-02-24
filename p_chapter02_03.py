@@ -54,6 +54,7 @@ class Car(object):
         return 'Succeed! price increased.'
 
     # Static Method
+    # Static Method는 특별한 파라미터를 받지 않는다.
     @staticmethod
     def is_bmw(inst):
         if inst._company == 'Bmw':
@@ -114,6 +115,7 @@ print(is_bmw(car2))
 print()
 
 # Bmw 여부(스테이틱 메소드 사용)
+# 클래스 또는 인스턴스로 호출해도 동일한 결과가 나타남
 print('Static : ', Car.is_bmw(car1))
 print('Static : ', Car.is_bmw(car2))
 print()
