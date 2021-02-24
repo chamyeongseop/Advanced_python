@@ -3,6 +3,7 @@
 # Special Method(Magic Method)
 # 참조 : https://docs.python.org/3/reference/datamodel.html#special-method-names
 # 파이썬의 핵심 -> 시퀀스(Sequence), 반복(Iterator), 함수(Functions), 클래스(Class)
+# 클래스 안에 정의할 수 있는 특별한 메소드(Built-in)
 
 # 기본형
 print(int)
@@ -18,6 +19,7 @@ n = 10
 
 # 사용
 print(n + 100)
+# 사칙연산의 경우, 내부적(Built-in)으로는 메소드가 호출되는 것이다.
 print(n.__add__(100))
 # print(n.__doc__)
 print(n.__bool__(), bool(n))
