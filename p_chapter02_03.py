@@ -39,6 +39,7 @@ class Car(object):
         return 'Before Car Price -> company : {}, price : {}'.format(self._company, self._details.get('price'))
 
     # Instance Method
+    # Class 변수 price_per_raise는 모두 공유하는 변수
     def get_price_culc(self):
         return 'After Car Price -> company : {}, price : {}'.format(self._company, self._details.get('price') * Car.price_per_raise)
 
@@ -59,7 +60,8 @@ class Car(object):
         return 'Sorry. This car is not Bmw.'
     
     
-# 자동차 인스턴스    
+# 자동차 인스턴스
+# 인스턴스 변수 : 보통은 캡슐화로 설정하여, Private로 설정함. 보통은 메소드를 만들어서, 필요한 정보를 반환하는 방식으로 만듦.
 car1 = Car('Bmw', {'color' : 'Black', 'horsepower': 270, 'price': 5000})
 car2 = Car('Audi', {'color' : 'Silver', 'horsepower': 300, 'price': 6000})
 
@@ -72,6 +74,10 @@ print()
 car1.detail_info()
 car2.detail_info()
 print()
+
+# 가격 정보(직접 접근)
+print(car1._details.get('price'))
+print(car2._details.get('price'))
 
 # 가격 정보(인상 전)
 print(car1.get_price())
