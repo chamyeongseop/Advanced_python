@@ -27,7 +27,9 @@ class Car(object):
         return 'repr : {} - {}'.format(self._company, self._details)
 
     # Instance Method
+    # Self 인자를 받는 것을 Instance Method라고 함.
     # self : 객체의 고유한 속성 값 사용
+
     def detail_info(self):
         print('Current Id : {}'.format(id(self)))
         print('Car Detail Info : {} {}'.format(self._company, self._details.get('price')))
