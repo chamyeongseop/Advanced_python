@@ -44,6 +44,7 @@ class Car(object):
         return 'After Car Price -> company : {}, price : {}'.format(self._company, self._details.get('price') * Car.price_per_raise)
 
     # Class Method
+    # cls: Instance Method를 통해, 매개변수를 보내는 일을 하지 않고, 클래스 자기 자신을 첫번째 매개변수로 받는 차이가 있음 -> cls 매개변수를 사용하여 Class Method 사용 (가독성 좋음)
     @classmethod
     def raise_price(cls, per):
         if per <= 1:
@@ -75,7 +76,7 @@ car1.detail_info()
 car2.detail_info()
 print()
 
-# 가격 정보(직접 접근)
+# 가격 정보(직접 접근) -> 추천하지 않는 방법
 print(car1._details.get('price'))
 print(car2._details.get('price'))
 
@@ -84,7 +85,7 @@ print(car1.get_price())
 print(car2.get_price())
 print()
 
-# 가격 인상(클래스 메소드 미사용)
+# 가격 인상(클래스 메소드 미사용) -> 직접 접근법으로 추천하지 않음
 Car.price_per_raise = 1.2
 
 # 가격 정보(인상 후)
