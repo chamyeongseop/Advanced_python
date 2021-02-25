@@ -60,6 +60,7 @@ p1 = Point1(x=10, y=35)
 p2 = Point2(20, 40)
 p3 = Point3(45, y=20)
 p4 = Point4(10, 20, 30, 40)
+# Tuple의 경우 *가 붙고, Dictionary의 경우 **가 붙음
 p5 = Point3(**temp_dict)
 
 # 출력
@@ -92,10 +93,10 @@ p4 = Point1._make(temp)
 
 print(p4)
 
-# _fields : 필드 네임 확인
+# _fields : 필드 네임 확인 -> 키 값만 확인 가능
 print(p1._fields, p2._fields, p3._fields)
 
-# _asdict() : OrderedDict 반환
+# _asdict() : OrderedDict 형태로 변환하여 리턴
 print(p1._asdict(), p4._asdict())
 
 
