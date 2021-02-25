@@ -23,6 +23,8 @@ print(l_leng1)
 from collections import namedtuple
 
 # 네임드 튜플 선언
+# Key, Value로 접근 가능 + Index를 사용하여 접근 또한 가능
+# NamedTuple 안에는 Key 값이 저장 됨.
 Point = namedtuple('Point', 'x y')
 
 # 두 점 선언
