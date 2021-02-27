@@ -2,8 +2,9 @@
 # 파이썬 심화
 # 시퀀스형
 ## 순서가 있고, 일렬로 나열되어 있는 번호가 붙은 타입
+## 컨테이너(Container : 서로다른 자료형[list, tuple, collections.deque]을 담을 수 있음
+## Flat : 한 개의 자료형[str,bytes,bytearray,array.array, memoryview])만 담을 수 있음
 
-# 컨테이너(Container : 서로다른 자료형[list, tuple, collections.deque], Flat : 한 개의 자료형[str,bytes,bytearray,array.array, memoryview])
 # 가변(list, bytearray, array.array, memoryview, deque) vs 불변(tuple, str, bytes)
 # 리스트 및 튜플 고급
 
@@ -22,6 +23,8 @@ code_list2 = [ord(s) for s in chars]
 
 # Comprehending Lists + Map, Filter
 # 속도 약간 우세
+# Ord함수 : 문자를 유니코드로 변환하는 함수
+# Chr함수 : 유니코드를 문자로 변환하는 함수
 code_list3 = [ord(s) for s in chars if ord(s) > 40]
 code_list4 = list(filter(lambda x : x > 40, map(ord, chars)))
 
