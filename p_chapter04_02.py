@@ -68,7 +68,7 @@ print('sorted -', f_list)
 
 print()
 
-# sort : 정렬 후 객체 직접 변경 -> 원본을 직접 수정함.
+# sort : 정렬 후 객체 직접 변경 -> 원본이 변경되거나, 원본을 직접 수정함.
 
 # 반환 값 확인(None)
 print('sort -', f_list.sort(), f_list)
