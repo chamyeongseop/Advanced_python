@@ -9,7 +9,7 @@
 # Unpacking
 
 # b, a = a, b
-
+# Unpacking의 다양한 예제 파악하기
 print(divmod(100, 9))
 print(divmod(*(100, 9)))
 print(*(divmod(100, 9)))
@@ -34,12 +34,14 @@ m = [15, 20, 25]
 print(l, id(l))
 print(m, id(m))
 
+# 곱해서 변수에 재할당을 했기 때문에, ID의 값이 변함.
 l = l * 2
 m = m * 2
 
 print(id(l))
 print(id(m))
 
+# 변동이 심한 리스트에 담아 놓는 편이 좋다. Tuple의 경우에는 변동 시, 새로운 ID를 재할당하기 때문에 계산량 또는 메모리 최적화에 좋지 않다.
 l *= 2
 m *= 2
 
@@ -52,7 +54,7 @@ print()
 # sort vs sorted 
 # reverse, key=len, key=str.lower, key=func..
 
-# sorted : 정렬 후 새로운 객체 반환
+# sorted : 정렬 후 새로운 객체 반환 -> 원본이 수정되지 않음
 f_list = ['orange', 'apple', 'mango', 'papaya', 'lemon', 'strawberry', 'coconut']
 
 print('sorted -', sorted(f_list))
@@ -66,7 +68,7 @@ print('sorted -', f_list)
 
 print()
 
-# sort : 정렬 후 객체 직접 변경
+# sort : 정렬 후 객체 직접 변경 -> 원본을 직접 수정함.
 
 # 반환 값 확인(None)
 print('sort -', f_list.sort(), f_list)
