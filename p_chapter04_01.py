@@ -69,6 +69,7 @@ print()
 print()
 
 # 리스트 주의
+# Deep Copy Versus Swallow Copy 차이 알기
 marks1 = [['~'] * 5 for n in range(5)]
 marks2 = [['~'] * 5] * 5
 
@@ -85,5 +86,7 @@ print(marks1)
 print(marks2)
 
 # 증명
+# Marks1 경우, 서로 다른 4개의 주소 값을 가진 객체를 생성한다.
 print([id(i) for i in marks1])
+# Marks2 경우, 동일한 주소 값(id)을 가지는 객체를 4개 복사 및 생성한다.
 print([id(i) for i in marks2])
