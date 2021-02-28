@@ -70,6 +70,7 @@ print()
 
 # 리스트 주의
 # Deep Copy Versus Swallow Copy 차이 알기
+# https://blueshw.github.io/2016/01/20/shallow-copy-deep-copy/ 참고
 marks1 = [['~'] * 5 for n in range(5)]
 marks2 = [['~'] * 5] * 5
 
