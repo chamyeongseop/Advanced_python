@@ -47,6 +47,8 @@ print(s4, type(s4))
 print(s5, type(s5))
 
 # 선언 최적화
+# Python은 인터프리터가 바이트 코드를 실행함.
+# dis를 사용하면, 바이트 코드가 실행되는 과정을 볼 수 있음
 from dis import dis
 
 print('------')
@@ -66,7 +68,6 @@ print('------')
 print({name(chr(i), '') for i in range(0,256)})
 
 
-# Hash Table
 # Hash Table
 class HashTable:
     def __init__(self, table_size):
