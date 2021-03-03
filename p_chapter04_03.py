@@ -2,6 +2,8 @@
 # 파이썬 심화
 # 시퀀스형
 # 해시테이블(hashtable) -> 적은 리소스로 많은 데이터를 효율적으로 관리
+# Key에 Value를 저장하는 구조
+# Key 값을 해싱 함수 -> Hash 주소 -> Key에 대한 Value를 참조함.
 # Dict -> Key 중복 허용 X, Set -> 중복 허용 X
 # Dict 및 Set 심화
 # 키 값의 연산 결과에 따라 직접 접근이 가능한 구조
@@ -17,6 +19,7 @@ t1 = (10, 20, (30, 40, 50))
 t2 = (10, 20, [30, 40, 50])
 
 print( hash(t1))
+# 리스트는 Mutable하기 때문에, Hash 함수를 사용할 수 없다. 불변형(Immutable)을 사용해야함.
 # print(hash(t2)) # 예외
 
 print()
