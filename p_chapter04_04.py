@@ -6,6 +6,7 @@
 # Dict 및 Set 심화
 
 # immutable Dict
+# 추가나 수정이 되지 않는(읽기 전용) 자료구조를 사용하기 위함(MappingProxyType)
 from types import MappingProxyType
 
 d = {'key1': 'value1'}
@@ -63,3 +64,40 @@ from unicodedata import name
 print('------')
 
 print({name(chr(i), '') for i in range(0,256)})
+
+
+# Hash Table
+# Hash Table
+class HashTable:
+    def __init__(self, table_size):
+        self.size = table_size
+        self.hash_table = [0 for a in range(self.size)]
+
+    def getKey(self, data):
+        self.key = ord(data[0])
+        return self.key
+
+    def hashFunction(self, key):
+        return key % self.size
+
+    def getAddress(self, key):
+        myKey = self.getKey(key)
+        hash_address = self.hashFunction(myKey)
+        return hash_address
+
+    def save(self, key, value):
+        hash_address = self.getAddress(key)
+        self.hash_table[hash_address] = value
+
+    def read(self, key):
+        hash_address = self.getAddress(key)
+        return self.hash_table[hash_address]
+
+    def delete(self, key):
+        hash_address = self.getAddress(key)
+
+        if self.hash_table[hash_address] != 0:
+            self.hash_table[hash_address] = 0
+            return True
+        else:
+            return False
