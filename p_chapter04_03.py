@@ -4,6 +4,7 @@
 # 해시테이블(hashtable) -> 적은 리소스로 많은 데이터를 효율적으로 관리
 # Dict -> Key 중복 허용 X, Set -> 중복 허용 X
 # Dict 및 Set 심화
+# 키 값의 연산 결과에 따라 직접 접근이 가능한 구조
 
 # Dict 구조
 # print(__builtins__.__dict__)
