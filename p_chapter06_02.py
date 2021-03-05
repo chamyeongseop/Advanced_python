@@ -1,5 +1,8 @@
 # Chapter06-02
-# 병행성(Concurrency)
+# 병행성(Concurrency) : 한 컴퓨터가 여어 일을 동시에 수행함. -> 코루틴으로 해결 가능 -> 단일 프로그램 안에서 여러가지 일을 쉽게 해결함.
+## Thread는 하나지만, 여러가지 일을 동시에 하는 것처럼 효율을 높일 수 있음(파이썬의 장점)
+# 병렬성(Parallelism) : 여러 컴퓨터가 여러 작업을 동시에 수행함 -> 속도
+
 # 이터레이터, 제네레이터
 # Iterator, Generator
 
@@ -27,8 +30,8 @@ for v in generator_ex1():
 print()
 
 # Generator Ex2
-temp2 = [x * 3 for x in generator_ex1()]
-temp3 = (x * 3 for x in generator_ex1())
+temp2 = [x * 3 for x in generator_ex1()] # Yield가 return 역할을 함.
+temp3 = (x * 3 for x in generator_ex1()) # Generator
 
 print(temp2)
 print(temp3)
