@@ -49,8 +49,8 @@ print()
 print()
 
 
-# Generator Ex3(중요 함수)
-# filterfalse, accumulate, chain, product, product, groupby
+# Generator Ex3(중요 함수) : itertools를 통해 사용할 수 있는 메소드
+# count, takewhile, filterfalse, accumulate, chain, product, product, groupby
 import itertools
 
 gen1 = itertools.count(1, 2.5)
@@ -64,6 +64,7 @@ print(next(gen1))
 print()
 
 # 조건
+## 1000 미만일 때까지 계속해서 증가함.
 gen2 = itertools.takewhile(lambda n : n < 1000, itertools.count(1, 2.5))
 
 for v in gen2:
@@ -72,7 +73,7 @@ for v in gen2:
 
 print()
 
-# 필터 반대
+# 필터 반대 -> 조건식의 반대의 경우를 취함
 gen3 = itertools.filterfalse(lambda n : n < 3, [1,2,3,4,5])
 
 for v in gen3:
