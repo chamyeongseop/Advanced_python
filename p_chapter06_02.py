@@ -96,7 +96,8 @@ gen5 = itertools.chain('ABCDE', range(1,11,2))
 print(list(gen5))
 
 # 연결2
-
+# enumerate : 순서가 있는 자료형(리스트, 튜플, 문자열)을 입력으로 받아, 인덱스 값을 포함하는 enumerate 객체를 반환함 
+# chain: 인자로 받은 iterator들의 원소를 연결하여 반환하는 메소드
 gen6 = itertools.chain(enumerate('ABCDE'))
 
 print(list(gen6))
@@ -107,11 +108,13 @@ gen7 = itertools.product('ABCDE')
 print(list(gen7))
 
 # 연산(경우의 수)
+# repeat는 조합을 뽑아냄
 gen8 = itertools.product('ABCDE', repeat=2)
 
 print(list(gen8))
 
 # 그룹화
+# 중복되는 문자열의 개수를 파악할 수 있는 메소드
 gen9 = itertools.groupby('AAABBCCCCDDEEE')
 
 # print(list(gen9))
@@ -120,3 +123,6 @@ for chr, group in gen9:
     print(chr, ' : ', list(group))
 
 print()
+
+# 참조
+# https://hamait.tistory.com/803
