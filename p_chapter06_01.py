@@ -85,7 +85,7 @@ class WordSplitGenerator:
     def __iter__(self):
         # print('Called __iter__')
         for word in self._text:
-            # Yield가 다음에 Return될 단어의 위치도 기억하고 있음.
+            # Yield가 다음에 반환 될 단어의 상태를 기억하고 있음. 추후에 코루틴이 됨
            yield word # 제네레이터
         return
     
