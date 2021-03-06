@@ -49,7 +49,7 @@ cr2 = coroutine1()
 # 코루틴 Ex2
 # GEN_CREATED : 처음 대기 상태
 # GEN_RUNNING : 실행 상태
-# GEN_SUSPENDED : yield 대기 상태
+# GEN_SUSPENDED : yield 대기 상태 (중요!): 이 때 Send를 보낼 수 있음
 # GEN_CLOSED : 실행 완료 상태
 
 def coroutine2(x):
