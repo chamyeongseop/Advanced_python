@@ -64,6 +64,7 @@ def coroutine2(x):
 
 cr3 = coroutine2(10)
 
+# 상태 값을 출력
 from inspect import getgeneratorstate
 
 print(getgeneratorstate(cr3))
