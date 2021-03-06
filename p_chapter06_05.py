@@ -45,7 +45,7 @@ def main():
     # ProcessPoolExecutor
     with ThreadPoolExecutor() as excutor:
         for work in WORK_LIST:
-            # future 반환
+            # future 반환 : 실행되는 것이 아니라, Future(미래의 할 일)만 반환함.
             future = excutor.submit(sum_generator, work)
             # 스케쥴링
             futures_list.append(future)
@@ -54,10 +54,13 @@ def main():
             # print()
         
         # wait 결과 출력
+        # timeout (실행 시간)을 설정하여, timeout을 벗어날 경우, 실행 결과를 SKIP한다.
         # result = wait(futures_list, timeout=7)
         # # 성공
+        # DONE : 끝났는지를 체크함.
         # print('Completed Tasks : ' + str(result.done))
         # # 실패
+        # # NOT_DONE : 실패했는지를 체크함.
         # print('Pending ones after waiting for 7seconds : ' + str(result.not_done))
         # # 결과 값 출력
         # print([future.result() for future in result.done])
