@@ -1,5 +1,6 @@
 # Chapter07-01
-# Asyncio
+# Asyncio is a library to write concurrent code using the async/await syntax
+# Asynchronous frameworks that provide high-performance network and web-servers, database connection libraries, distributed task queues, etc.
 # 비동기 I/O Coroutine 작업
 # Generator -> 반복적인 객체 Return 사용
 # non-blocking 비동기 처리
