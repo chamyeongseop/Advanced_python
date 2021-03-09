@@ -13,7 +13,7 @@
 
 # 쓰레드 단점 : 디버깅, 자원 접근 시 Race Condition(경쟁 상태), 데드락(Dead Lock) 들을 고려한 후에 코딩해야 함.
 # 코루틴 장점 : 하나의 루틴만 실행 -> 락 관리 필요가 없고, 제어권을 통해 실행함.
-# 코루틴 단점 : 사용 함수가 비동기로 구현되어있어야 함.
+# 코루틴 단점 : 사용 함수가 비동기로 구현되어 있어야 하거나, 직접 비동기로 구현해야 함
 
 
 # Asyncio 웹 스크랩핑 실습
@@ -34,21 +34,26 @@ async def fetch(url, executor):
     # 쓰레드명 출력
     print('Thread Name :', threading.current_thread().getName(), 'Start', url)
     # 실행
+    # 다른 함수가 요청할 때까지 기다려 줌
+    # urlopen은 Block 함수이므로, Non-block 함수로 만들어준다.
     res = await loop.run_in_executor(executor, urlopen, url)
     print('Thread Name :', threading.current_thread().getName(), 'Done', url)
     # 결과 반환
     return res.read()[0:5]
 
+# 비동기 함수 선언
 async def main():
     # 쓰레드 풀 생성
     executor = ThreadPoolExecutor(max_workers=10)
 
-    # future 객체 모아서 gather에서 실행
+    # future 객체 모아서 gather에서 실행 " list comprehension
+    # 중요 부분
     futures = [
         asyncio.ensure_future(fetch(url, executor)) for url in urls
     ]
     
     # 결과 취합
+    # futures는 list형태이므로 Unpacking을 수행한 후, Instance로 넣어준다.
     rst = await asyncio.gather(*futures)
 
     print()
