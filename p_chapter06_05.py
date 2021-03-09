@@ -12,6 +12,8 @@
 # 2가지 패턴 실습
 # concurrent.futures map
 # concurrent.futures wait, as_completed
+# # concurrent.futures wait: 시간을 제어할 수 있고, 인스턴스들이 완료할 때까지 기다리며, 제어할 수 있다.
+# # as_completed : as_completed가 호출되기 전에 완료한 모든 Future들이 먼저 Yield한다. 먼저 끝나는 순서대로 반환함.
 
 # GIL : 두 개 이상의 스레드가 동시에 실행 될 때 하나의 자원을 엑세스 하는 경우 -> 문제점을 방지하기 위해
 #       GIL 실행 , 리소스 전체에 락이 걸린다. -> Context Switch(문맥 교환)
