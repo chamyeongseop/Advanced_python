@@ -1,9 +1,20 @@
 # Chapter07-01
 # Asyncio is a library to write concurrent code using the async/await syntax
 # Asynchronous frameworks that provide high-performance network and web-servers, database connection libraries, distributed task queues, etc.
+# Async I/O: 코루틴에서 네트워크나 파일 처리를 따로 할 수 있도록 만듦
 # 비동기 I/O Coroutine 작업
 # Generator -> 반복적인 객체 Return 사용
 # non-blocking 비동기 처리
+
+## 용어 숙지
+### Blocking I/O : 호출 된 함수가 자신의 작업이 완료 될 때까지 제어권을 가지고 있음. 타 함수는 대기해야 함
+### NonBlocking I/O : 호출 된 함수(서브 루틴)가 reture(yield) 후, 호출한 함수(메인 루틴)에 제어권을 전달 -> 타 함수는 일을 지속할 수 있음
+
+
+# 쓰레드 단점 : 디버깅, 자원 접근 시 Race Condition(경쟁 상태), 데드락(Dead Lock) 들을 고려한 후에 코딩해야 함.
+# 코루틴 장점 : 하나의 루틴만 실행 -> 락 관리 필요가 없고, 제어권을 통해 실행함.
+# 코루틴 단점 : 사용 함수가 비동기로 구현되어있어야 함.
+
 
 # Asyncio 웹 스크랩핑 실습
 # aiohttp 권장
