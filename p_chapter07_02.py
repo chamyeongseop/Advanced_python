@@ -17,6 +17,7 @@ from bs4 import BeautifulSoup
 
 import sys
 import io
+# 한글 깨짐 방지
 sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding = 'utf-8')
 sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding = 'utf-8')
 
