@@ -26,6 +26,7 @@ import threading
 
 # 실행 시작 시간
 start = timeit.default_timer()
+
 # 서비스 방향이 비슷한 사이트로 실습 권장(예 : 게시판성 커뮤니티)
 urls = ['http://daum.net', 'https://naver.com', 'http://mlbpark.donga.com/', 'https://tistory.com', 'https://wemakeprice.com/']
 
@@ -51,7 +52,7 @@ async def main():
     futures = [
         asyncio.ensure_future(fetch(url, executor)) for url in urls
     ]
-    
+
     # 결과 취합
     # futures는 list형태이므로 Unpacking을 수행한 후, Instance로 넣어준다.
     rst = await asyncio.gather(*futures)
