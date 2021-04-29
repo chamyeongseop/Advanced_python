@@ -6,6 +6,7 @@
 # 클래스 사용 장점
 
 # 일반적인 코딩
+
 # 차량1
 car_company_1 = 'Ferrari'
 car_detail_1 = [
@@ -29,6 +30,7 @@ car_detail_3 = [
     {'horsepower': 300},
     {'price': 6000}
 ]
+
 
 
 # 리스트 구조
@@ -79,7 +81,7 @@ class Car():
     # 개발자 레벨 : 객체 정보까지 문자열로 표현해준다.
     def __repr__(self):
         return 'repr : {} - {}'.format(self.company, self.details)
-    
+
 
 car1 = Car('Ferrari', {'color' : 'White', 'horsepower': 400, 'price': 8000})
 car2 = Car('Bmw', {'color' : 'Black', 'horsepower': 270, 'price': 5000})
