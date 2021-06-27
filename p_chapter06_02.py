@@ -1,4 +1,5 @@
 # Chapter06-02
+
 # 병행성(Concurrency) : 한 컴퓨터가 여어 일을 동시에 수행함. -> 코루틴으로 해결 가능 -> 단일 프로그램 안에서 여러가지 일을 쉽게 해결함.
 ## Thread는 하나지만, 여러가지 일을 동시에 하는 것처럼 효율을 높일 수 있음(파이썬의 장점)
 # 병렬성(Parallelism) : 여러 컴퓨터가 여러 작업을 동시에 수행함 -> 속도
@@ -96,7 +97,7 @@ gen5 = itertools.chain('ABCDE', range(1,11,2))
 print(list(gen5))
 
 # 연결2
-# enumerate : 순서가 있는 자료형(리스트, 튜플, 문자열)을 입력으로 받아, 인덱스 값을 포함하는 enumerate 객체를 반환함 
+# enumerate : 순서가 있는 자료형(리스트, 튜플, 문자열)을 입력으로 받아, 인덱스 값을 포함하는 enumerate 객체를 반환함
 # chain: 인자로 받은 iterator들의 원소를 연결하여 반환하는 메소드
 gen6 = itertools.chain(enumerate('ABCDE'))
 
