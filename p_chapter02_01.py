@@ -82,7 +82,6 @@ class Car():
     def __repr__(self):
         return 'repr : {} - {}'.format(self.company, self.details)
 
-
 car1 = Car('Ferrari', {'color' : 'White', 'horsepower': 400, 'price': 8000})
 car2 = Car('Bmw', {'color' : 'Black', 'horsepower': 270, 'price': 5000})
 car3 = Car('Audi', {'color' : 'Silver', 'horsepower': 300, 'price': 6000})
