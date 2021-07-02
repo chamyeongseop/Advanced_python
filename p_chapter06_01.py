@@ -19,9 +19,7 @@ for c in t:
 print()
 
 # while 반복
-
 w = iter(t)
-
 while True:
     try:
         print(next(w))
@@ -44,7 +42,7 @@ class WordSplitter:
     def __init__(self, text):
         self._idx = 0
         self._text = text.split(' ')
-    
+
     def __next__(self):
         # print('Called __next__')
         try:
@@ -81,14 +79,14 @@ print()
 class WordSplitGenerator:
     def __init__(self, text):
         self._text = text.split(' ')
-    
+
     def __iter__(self):
         # print('Called __iter__')
         for word in self._text:
             # Yield가 다음에 반환 될 단어의 상태를 기억하고 있음. 추후에 코루틴이 됨
            yield word # 제네레이터
         return
-    
+
     def __repr__(self):
         return 'WordSplit(%s)' % (self._text)
 
